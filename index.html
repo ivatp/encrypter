@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset = 'UTF-8'>
+        <title>Encriptador </title>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon_io/favicon-16x16.png">
+    </head>
+    <body>
+        <header>
+            <div>
+                <img class="logo" src="imagenes/Logo.svg" alt="Logo Alura">
+            </div>
+        </header>
+        <main>
+            <section>
+                <textarea id="mensaje" class="input-mensaje" placeholder="Ingrese el texto aquí"  required></textarea>
+                <div class="restricciones">
+                    <svg class="exclamation" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"/></svg>
+                    <p class="condiciones">Sólo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <input class="boton-encriptar" type="button" value="Encriptar" onclick="encriptar()">
+                    <input class="boton-desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
+                </div>
+            </section>   
+            <section>
+                <textarea type="text" id="respuesta" class="respuesta" readonly name="respuesta" cols="30" rows="10"></textarea>
+                    <div>
+                        <fieldset id="advertencia" style="display: block;">
+                            <img id="muñecos" class="muñeco" src="imagenes/Muneco.svg" alt="muñeco_busqueda">
+                            <p class="texto-muñeco">Ningún mensaje fue encontrado</p>
+                            <p class="texto-muñeco2">Ingresa el texto que desees encriptar o desencriptar</p>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <input class="boton-copiar" id="copiar" type="button" value="Copiar" style="display: none;" onclick="copiar()">
+                    </div>
+            </section> 
+        </main>
+        <footer>
+            <div>
+                <h6>Elaborado por @ivatp <img class="github-logo" src="imagenes/github-mark-white.png" alt="logo-github"></h6>
+            </div>
+        </footer>
+    </body>
+    <script src="js/script.js" type="text/javascript"></script>
+ 
+</html>
